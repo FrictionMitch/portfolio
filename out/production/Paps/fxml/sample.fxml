@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Text?>
+
+<GridPane alignment="CENTER" gridLinesVisible="false" hgap="10.0" stylesheets="/css/sample.css" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controller">
+  <Text styleClass="title" text="PAPS FULL" textAlignment="CENTER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="0">
+    <effect>
+      <Glow level="0.9178343949044585" />
+    </effect>
+  </Text>
+  <TextArea fx:id="textArea" editable="false" focusTraversable="false" styleClass="text-field" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="1">
+    <effect>
+      <InnerShadow color="GREY" height="38.76223776223776" radius="18.88111888111888" width="38.76223776223776" />
+    </effect>
+  </TextArea>
+  <Label text="Start Number:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+  <TextField fx:id="startNumber" promptText="Enter PAPS start number" GridPane.columnIndex="1" GridPane.rowIndex="2">
+    <effect>
+      <InnerShadow height="11.0" radius="5.0" width="11.0">
+        <color>
+          <Color blue="0.375" green="0.375" red="0.375" fx:id="x1" />
+        </color>
+      </InnerShadow>
+    </effect>
+  </TextField>
+  <Label text="Quantity" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+  <TextField fx:id="qty" promptText="Enter Quantity" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+    <effect>
+      <InnerShadow color="$x1" height="11.0" radius="5.0" width="11.0" />
+    </effect>
+  </TextField>
+  <Button onAction="#handleStart" text="Forward Count" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+    <effect>
+      <DropShadow color="#404040" offsetY="5.0" />
+    </effect>
+  </Button>
+  <Button onAction="#handleEnd" text="Reverse Count" GridPane.columnIndex="0" GridPane.halignment="LEFT" GridPane.rowIndex="4">
+    <effect>
+      <DropShadow color="$x1" offsetY="5.0" />
+    </effect>
+  </Button>
+  <effect>
+    <DropShadow />
+  </effect>
+  <Button onAction="#handlePrint" text="Print File" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+    <effect>
+      <DropShadow color="$x1" offsetY="5.0" />
+    </effect>
+  </Button>
+  <padding>
+    <Insets bottom="20.0" left="10.0" right="10.0" top="10.0" />
+  </padding>
+</GridPane>

@@ -1,0 +1,43 @@
+<html><head>
+  <SCRIPT src="http://java.com/js/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'Paps.jnlp'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedPaps_id() {
+        dtjava.embed(
+            {
+                id : 'Paps_id',
+                url : 'Paps.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '300',
+                height : '350'
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedPaps_id);
+</script>
+
+</head><body>
+<h2>Test page for <b>Paps</b></h2>
+  <b>Webstart:</b> <a href='Paps.jnlp' onclick="return launchApplication('Paps.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

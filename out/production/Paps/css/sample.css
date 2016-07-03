@@ -1,0 +1,31 @@
+.root {
+    -fx-font-family: Papyrus;
+    -fx-alignment: center;
+    -fx-hgap: 10;
+    -fx-vgap: 10
+}
+
+.title {
+    -fx-font-family: Arial Black;
+    -fx-font-size: 40px;
+    -fx-fill: BLUE;
+}
+
+.label {
+    -fx-font-family: Helvetica;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-font-family: Helvetica;
+}
+
+.button {
+    -fx-font-family: Helvetica;
+    -fx-font-weight: bold;
+}
+
+#startNumber {
+    -fx-background-color: yellow;
+    -fx-font-family: Impact;
+}
